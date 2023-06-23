@@ -12,7 +12,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(states,id: \.self){ statestr in
-                NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/)
+                NavigationLink(destination: ScrollView {
+                    Text(statestr)
+                })
                 {
                     Text(statestr)
                     
