@@ -10,10 +10,16 @@ import SwiftUI
 struct ContentView: View {
     let states = ["Maharashtra" , "Karnataka", "Punjab", "Gujrat"]
     var body: some View {
-        List(states,id: \.self){ statestr in
-         Text(statestr)
-        }
-        .padding()
+        NavigationView {
+            List(states,id: \.self){ statestr in
+                NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/)
+                {
+                    Text(statestr)
+                    
+                }
+            }
+        }.navigationTitle("States")
+        
     }
 }
 
